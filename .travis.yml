@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - "6"
+
+branches:
+  only:
+    - master
+
+before_install:
+  - git config --global push.default matching
+  - git config --global user.name "erguotou"
+  - git config --global user.email "erguotou525@gmail.com"
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+cache:
+  directories:
+    - node_modules

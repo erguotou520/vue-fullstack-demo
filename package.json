@@ -23,7 +23,8 @@
     "server": "./node_modules/.bin/nodemon --watch server server/app.js",
     "dev": "npm run client|npm run server",
     "build": "node client/build/build.js",
-    "lint": "eslint --ext .js,.vue client/src"
+    "lint": "eslint --ext .js,.vue client/src",
+    "publish": "ghpages -p client/src -r erguotou520/vue-fullstack-demo -d https://erguotou520.github.io/vue-fullstack-demo"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

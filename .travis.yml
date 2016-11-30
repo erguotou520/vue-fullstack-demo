@@ -8,6 +8,7 @@ branches:
     - master
 
 before_install:
+  - npm install -g ghpages
   - git config --global push.default matching
   - git config --global user.name "erguotou"
   - git config --global user.email "erguotou525@gmail.com"
@@ -17,7 +18,9 @@ install:
 
 script:
   - npm run build
-
+after_success:
+  - npm run publish
 cache:
   directories:
+    - $(npm config get prefix)/bin/ghpages
     - node_modules

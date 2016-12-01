@@ -73,7 +73,7 @@ var production = {
     // Server IP
     ip: process.env.OPENSHIFT_NODEJS_IP || process.env.HOST || process.env.IP || undefined,
     // Server port
-    port: process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT,
+    port: process.env.OPENSHIFT_NODEJS_PORT || process.env.SERVER_PORT || process.env.PORT,
     // MongoDB connection options
     mongo: {
       uri: process.env.MONGODB_URI || process.env.MONGOHQ_URL ||

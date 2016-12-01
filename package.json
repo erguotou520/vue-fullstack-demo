@@ -19,7 +19,6 @@
   "author": "erguotou <erguotou525@gmail.com>",
   "private": false,
   "scripts": {
-    "preinstall": "npm i -g pm2",
     "client": "node client/build/dev-server.js",
     "server": "./node_modules/.bin/nodemon --watch server server/app.js",
     "dev": "npm run client|npm run server",

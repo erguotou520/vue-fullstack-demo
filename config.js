@@ -87,5 +87,4 @@ var production = {
 }
 
 var config = process.env.NODE_ENV === 'production' ? production : development
-console.log(config)
 module.exports = _.assign({}, config)

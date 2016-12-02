@@ -10,12 +10,12 @@
     <div>
       <el-card class="box-card" v-for="thing in things">
         <div slot="header" class="clearfix">
-          <span></span>
+          <span>{{thing.name}}</span>
           <i class="el-icon-delete icon" @click="deleteThing(thing._id)"></i>
           <i class="el-icon-edit icon" @click="editThing(thing)"></i>
         </div>
         <p>
-          
+          {{thing.info}}
         </p>
       </el-card>
     </div>

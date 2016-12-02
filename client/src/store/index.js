@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import locale from './modules/locale'
 import routeLoading from './modules/route'
 import config from './modules/global-config'
 import user from './modules/user'

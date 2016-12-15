@@ -7,7 +7,6 @@ sync(store, router)
 
 // locale
 import './locale'
-
 // ui library
 import Element from 'element-ui'
 Vue.use(Element)

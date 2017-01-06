@@ -88,15 +88,15 @@ export default {
         this.fetch()
       }).catch(() => {})
     },
-    editThing (thing) {
-      Object.assign(this.form, thing)
+    editThing (_thing) {
+      Object.assign(this.form, _thing)
       this.formVisible = true
     },
-    deleteThing (thing) {
-      this.$confirm(`This action will remove the selected thing: ${thing.name} forever, still going on?`, this.$t('message.confirm.title'), {
+    deleteThing (_thing) {
+      this.$confirm(`This action will remove the selected thing: ${_thing.name} forever, still going on?`, this.$t('message.confirm.title'), {
         type: 'warning'
       }).then(() => {
-        thing.delete({ _id: thing._id }).then(() => {
+        thing.delete({ _id: _thing._id }).then(() => {
           this.$message({
             type: 'success',
             message: this.$t('message.removed')
@@ -106,8 +106,10 @@ export default {
       }).catch(() => {})
     }
   },
-  created () {
-    this.fetch()
+  mounted () {
+    this.$nextTick(() => {
+      this.fetch()
+    })
   }
 }
 </script>

@@ -78,7 +78,7 @@
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.12.0",
     "inject-loader": "^2.0.1",
-    "nodemon": "^1.10.2",
+    "mockjs": "^1.0.1-beta3",
     "ora": "^0.2.0",
     "os-locale": "^2.0.0",
     "shelljs": "^0.6.0",
